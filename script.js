@@ -5,8 +5,11 @@ let user = prompt("Give me a number")
 const loop = (num) =>{
     if(!isNaN(num)){
         for(num; num >= 0; num -= 1){
-            if(num < 50){
-                alert(`Currently at ${num} terminating the loop...`)
+            if(num > 50){
+                console.log(num)
+                continue;
+            }else{
+                console.log(`Currently at ${num} terminating the loop...`)
                 break;
             }
         }
@@ -27,7 +30,7 @@ const countRotation = (num) =>{
                 console.log(`The number ${num} is ivisible by 10. Skipping the number`)
                 continue;
             } else if(num % 5 === 0) {
-                console.log(`The number ${num} is ivisible by 5`) 
+                console.log(`${num} is dividible by 5`) 
             }
         }
     }else{
